@@ -1,0 +1,453 @@
+:root {
+    --roxo-degrade-escuro: #7e1e88;
+    --roxo-degrade-claro: #951179;
+    --roxo-botão: #a83ebf;
+}
+body{
+    background-image: url(../images/universo2.png);
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.container{
+    margin-top: 200px;
+    gap: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 800;
+    
+}
+/*-----marte1-----*/
+.marte{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+
+}
+#card{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face{
+    width: 300px;
+    height: 400px;
+    color: white;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+
+}
+#back .tita-saturno{
+    width: 300px;
+    height: 170px;
+    border-radius: 4px;
+}
+#back .copywrite{
+    text-align: justify;
+    padding: 20px;
+}
+.flip{
+    transform: rotateY(180deg);
+}
+
+/*-----Jupiter1-----*/
+.jupiter{
+    display: flex;
+    justify-content: left;
+
+}
+#card2{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face2{
+    width: 300px;
+    height: 400px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front2{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back2{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+}
+.flip2{
+    transform: rotateY(180deg);
+}
+#back2 .io-jupiter{
+    width: 100%;
+    height: 170px;
+    border-radius: 4px;
+}
+#back2 .copywrite2{
+    text-align: justify;
+    padding: 20px;
+}
+/*----- Saturno1 ------*/
+.saturno{
+    display: flex;
+    justify-content: right;
+
+}
+#card3{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face3{
+    width: 300px;
+    height: 400px;
+    color: white;
+    position: absolute;
+    border-radius: px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front3{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back3{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+    opacity:1.5;
+}
+.flip3{
+    transform: rotateY(180deg);
+}
+#back3 .phobos-marte{
+    width: 300px;
+    height: 170px;
+}
+#back3 .copywrite3{
+    text-align: justify;
+    padding: 20px;
+    
+    
+}
+/*-----marte2-----*/
+.card-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-grow: 1;
+
+}
+.marte2{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+
+}
+#card4{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face4{
+    width: 300px;
+    height: 400px;
+    color: white;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front4{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back4{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+
+}
+#back4 .rhea-saturno{
+    width: 300px;
+    height: 170px;
+    border-radius: 4px;
+}
+#back4 .copywrite4{
+    text-align: justify;
+    padding: 20px;
+}
+.flip4{
+    transform: rotateY(180deg);
+}
+
+/*-----Jupiter2-----*/
+.jupiter2{
+    display: flex;
+    justify-content: left;
+
+}
+#card5{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face5{
+    width: 300px;
+    height: 400px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front5{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back5{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+}
+.flip5{
+    transform: rotateY(180deg);
+}
+#back5 .europa-jupiter{
+    width: 100%;
+    height: 170px;
+    border-radius: 4px;
+}
+#back5 .copywrite5{
+    text-align: justify;
+    padding: 20px;
+}
+/*----- Saturno2 ------*/
+.saturno2{
+    display: flex;
+    justify-content: right;
+
+}
+#card6{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face6{
+    width: 300px;
+    height: 400px;
+    color: white;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front6{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back6{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+    opacity:1.5;
+}
+.flip6{
+    transform: rotateY(180deg);
+}
+#back6 .deimos-marte{
+    width: 300px;
+    height: 170px;
+}
+#back6 .copywrite6{
+    text-align: justify;
+    padding: 20px;
+}
+/*-----marte3-----*/
+.container3{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+}
+.marte3{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+
+}
+#card7{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face7{
+    width: 300px;
+    height: 400px;
+    color: white;
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front7{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back7{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+
+}
+#back7 .planeta-saturno{
+    width: 300px;
+    height: 170px;
+    border-radius: 4px;
+}
+#back7 .copywrite7{
+    text-align: justify;
+    padding: 20px;
+}
+.flip7{
+    transform: rotateY(180deg);
+}
+
+/*-----Jupiter3-----*/
+.jupiter3{
+    display: flex;
+    justify-content: left;
+
+}
+#card8{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face8{
+    width: 300px;
+    height: 400px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front8{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back8{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+}
+.flip8{
+    transform: rotateY(180deg);
+}
+#back8 .callisto-jupiter{
+    width: 100%;
+    height: 170px;
+    border-radius: 4px;
+}
+#back8 .copywrite8{
+    text-align: justify;
+    padding: 20px;
+}
+/*----- Saturno3 ------*/
+.saturno3{
+    display: flex;
+    justify-content: right;
+
+}
+#card9{
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transition: all .9s;
+    
+}
+.face9{
+    width: 300px;
+    height: 400px;
+    color: white;
+    position: absolute;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.438);
+}
+#front9{
+    background-image: url(Assets/images/cardf-image.jpg);
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.63);
+}
+#back9{
+    background-image: url(Assets/images/cardb-image.jpg);
+    backface-visibility: hidden;
+    opacity:1.5;
+}
+.flip9{
+    transform: rotateY(180deg);
+}
+#back9 .planeta-marte{
+    width: 300px;
+    height: 170px;
+}
+#back9 .copywrite9{
+    text-align: justify;
+    padding: 20px;
+    
+    
+}
+button{
+    text-align: center;
+}
+.button{
+    display: flex;
+    border: none;
+    background-color: var(--roxo-botão);
+    color: white;
+    margin:auto ;
+    padding: 15px;
+    border-radius: 4px;
+    
+}
+.button a{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+.button:hover{
+    background-color: black;
+    color: var(--roxo-botão);
+}
+
+

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Yeager';
+    src: url('../fontes/Yeager/Yeager-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(../fontes/Inter-Regular.ttf) format('opentype');
+}
+@font-face {
+    font-family: 'Herming';
+    src: url(../fontes/Heming\ Variable.ttf) format('opentype');
+}
+:root {
+    --roxo-degrade-escuro: #7e1e88;
+    --roxo-degrade-claro: #951179;
+    --roxo-botão: #a83ebf;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#criarc{
+    background-image: linear-gradient(to bottom, var(--roxo-degrade-escuro),var(--roxo-degrade-claro));
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: normal; 
+}
+#criarc:hover{
+    color:black;
+}
+
+a.navbar-brand{
+    color: white;
+}
+.navbar-brand .logo{
+    width: 250px;
+}
+.navbar-brand p{
+    font-size: 50px;
+}
+.navbar-brand:hover{
+    background-color: none ;
+    color: white;
+}
+.navbar-brand:visited{
+    color: white;
+}
+.navbar-nav{
+    gap: 5px;
+    letter-spacing: 3px;
+}
+a.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: var(--roxo-degrade-escuro);
+}
+.nav-link:active{
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+.bg{
+    background-color: white;
+}
+.landing-div{
+    position: relative;
+}
+.orb {
+    position: absolute;
+    left: 50%; /* Define a posição horizontal no meio da página */
+    transform: translateX(-50%); /* Reposiciona a imagem no centro */
+    width: clamp(400px, 70%, 900px);
+
+}
+
+.box{
+    position: absolute;
+    top:80px;
+    left: 50px;
+    padding: 40px;
+    width: clamp(350px,55%, 547px);
+    height: 588px ;
+}
+.box h1 {
+    font-family: 'Yeager', sans-serif;
+    color: white;
+    font-size: 5.1vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    text-transform: uppercase;
+    line-height: 1.2; /* Espaçamento entre linhas responsivo */
+    max-width: 100%;
+    min-width: 300px;
+    overflow-x: hidden;
+}
+.container1{
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+.font{
+    margin: 0px;
+    font-family: 'Inter';
+    font-weight: 500px;
+}
+
+.box p{
+    color: gray;
+    text-align: justify;
+}
+.botao{
+    background-color: var(--roxo-botão);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+}
+.botao:hover{
+    background-color: white;
+    color: var(--roxo-botão);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--roxo-degrade-escuro);
+    padding: 10px;
+    color: white;
+}
+
+/*----Destinos-----*/
+.titulo-destinos{
+    font-family: 'Yeager',sans-serif;
+    color: white;
+    font-size: 100px;
+    padding: 80px;
+    padding-bottom: 50px;
+    text-align: center;
+    letter-spacing: -2px;
+    font-size: 60px;
+}
+
+img.io{
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card1 {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding-bottom: 100px;
+}
+
+.card1 img {
+    width: 100%;
+    height: auto;
+}
+
+.card1 h2 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+.card1 p {
+    font-size: 14px;
+    color: #ffffff;
+    text-align: justify;
+    padding-bottom: 5px;
+
+}
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.btn{
+    display: flex;
+    margin: auto;
+    background-color: var(--roxo-botão);
+    color: white;
+}
+.btn:hover{
+    color: var(--roxo-botão);
+    background-color: black;
+}
+.rodape{
+    background-image:linear-gradient(to bottom, transparent, #555555a8);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 5px;
+    padding: 10px;
+    
+}
+/* ----- Modal -----*/
+.info-modal {
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%; /* Largura do modal */
+    height: 50%; /* Altura do modal */
+    background-color: rgba(0, 0, 0, 0.3); /* Fundo transparente */
+    z-index: 1;
+    box-shadow: 3px 3px 10px black;
+}
+
+.modal-content {
+    background-color: #000000;
+    box-shadow: 1px 1px 8px rgba(255, 255, 255, 0.452);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+button{
+    color: white;
+    background-color: var(--roxo-botão);
+    border: 0;
+
+}
+button:hover{
+    background-color: #000000;
+    color: var(--roxo-botão);
+}
+#b-modal{
+    width: 200px;
+    height: 50px;
+    margin: auto;
+    border-radius: 4px;
+}
+
+.info-button {
+    cursor: pointer;
+}
+/*---- Game ----*/
+/* Adicione estilos CSS para o layout */

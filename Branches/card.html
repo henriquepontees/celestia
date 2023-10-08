@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/css/card.css">
+    <title>Animação de Virada</title>
+
+</head>
+<body>
+    <main class="container">
+        <section class="saturno">
+            <div class="flip" id="card">
+                <div class="face" id="front">
+                </div>
+                <div class="face" id="back">
+                    <img class="tita-saturno" src="../Assets/images/titan-saturno.jpg" alt="">
+                    <div class="copywrite">
+                        <p>Saturn, the ringed wonder, dances in the heavens, captivating us with its mesmerizing rings that span vast distances and glisten like jewels in space.</p>
+                    </div>
+                    <button class="button" type="button"><a href="itinerario.html">Chose</a></button>
+                </div>
+            </div>
+        </section>
+        <section class="jupiter">
+            <div class="flip2" id="card2">
+                <div class="face2" id="front2"> 
+                </div>
+                <div class="face2" id="back2">
+                    <img class="io-jupiter" src="../Assets/images/io-jupiter.jpg" alt="">
+                    <div class="copywrite2">
+                        <p>Approaching Jupiter is like entering a realm of otherworldly beauty, where massive storms rage for centuries, and where the hunt for its elusive core continues.</p>
+                    </div>
+                    <button class="button" type="button"><a href="itinerario.html">Chose</a></button>
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="marte">
+            <div class="flip3" id="card3">
+                <div class="face3" id="front3">
+                </div>
+                <div class="face3" id="back3">
+                    <img class="phobos-marte" src="../Assets/images/phobos-marte.jpg" alt="">
+                    <div class="copywrite3">
+                        <p>As we venture to Mars, we embark on a journey to unlock the secrets of its past, to unravel the enigmatic tale of water and the potential for life beneath its rusty surface.</p>
+                    </div>
+                    <button class="button" type="button"><a href="itinerario.html">Chose</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    
+    <script>
+        async function fetchCards() {
+            try {
+                const response = await fetch('https://api.le-systeme-solaire.net/rest/bodies/');
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar dados da API');
+                }
+                const data = await response.json();
+                return data.bodies;
+            } catch (error) {
+                console.error(error);
+                return [];
+            }
+        }
+
+        
+        let card1 = document.querySelector('#card')
+        card1.addEventListener('click', ()=>{
+            card1.classList.toggle('flip')
+            console.log("CARD 1ªTent", card1)
+        })
+        const card2 = document.querySelector('#card2')
+        card2.addEventListener('click', ()=>{
+            card2.classList.toggle('flip2')
+        })
+        const card3 = document.querySelector('#card3')
+        card3.addEventListener('click', ()=>{
+            card3.classList.toggle('flip3')
+        })
+        const card4 = document.querySelector('#card4')
+        card4.addEventListener('click', ()=>{
+            card4.classList.toggle('flip4')
+        })
+        const card5 = document.querySelector('#card5')
+        card5.addEventListener('click', ()=>{
+            card5.classList.toggle('flip5')
+        })
+        const card6 = document.querySelector('#card6')
+        card6.addEventListener('click', ()=>{
+            card6.classList.toggle('flip6')
+        })
+        const card7 = document.querySelector('#card7')
+        card7.addEventListener('click', ()=>{
+            card7.classList.toggle('flip7')
+        })
+        const card8 = document.querySelector('#card8')
+        card8.addEventListener('click', ()=>{
+            card8.classList.toggle('flip8')
+        })
+        const card9 = document.querySelector('#card9')
+        card9.addEventListener('click', ()=>{
+            card9.classList.toggle('flip9')
+        })
+
+        async function startGame() {
+            const cards = await fetchCards();
+            if (cards.length === 0) {
+                alert('Não foi possível obter os dados da API. Verifique a URL da API.');
+                return;
+            }
+            const specificIndexes = [0, 1, 2, 4, 9, 11, 12, 14, 18];
+            const specificCards = specificIndexes.map(index => cards[index]);
+            console.log("SPECIFYCARDS", specificCards)
+            let card1 = specificCards[0]
+            console.log("CARD 2ªTent", card1.aroundPlanet)
+
+            const moon = specificCards[0].aroundPlanet.rel; // Supondo que "data" seja o objeto que contém o array "bodies"
+            const planet = moon;
+            console.log("Infos Planeta", planet);
+
+            const planetName = planet; // Acessa o nome do planeta usando a notação de ponto
+            console.log("PlanetName", planetName)
+
+            const round1 = document.getElementById("round1");
+            const round2 = document.getElementById("round2");
+            const round3 = document.getElementById("round3");
+            const showResultButton = document.getElementById("showResult");
+            const result = document.getElementById("result");
+
+            let selectedCards = [];
+
+            function createCardElement(card) {
+                const cardElement = document.createElement("div");
+                cardElement.className = "card";
+
+                const imgElement = document.createElement("img");
+                imgElement.src = card.image;
+
+                const textElement = document.createElement("p");
+                textElement.textContent = card.englishName || "Unknown";
+
+                cardElement.appendChild(imgElement);
+                cardElement.appendChild(textElement);
+
+                cardElement.addEventListener("click", () => {
+                    if (selectedCards.length < 3) {
+                        selectedCards.push(card);
+                        cardElement.style.backgroundColor = "lightgreen";
+                        cardElement.style.pointerEvents = "none";
+                    }
+
+                    if (selectedCards.length === 3) {
+                        showResultButton.style.display = "block";
+                    }
+                });
+
+                return cardElement;
+            }
+
+            function startRound(roundContainer, cards) {
+                roundContainer.innerHTML = "";
+                for (const card of cards) {
+                    const cardElement = createCardElement(card);
+                    roundContainer.appendChild(cardElement);
+                }
+            }
+
+            showResultButton.addEventListener("click", () => {
+                result.innerHTML = "Cartas selecionadas:<br>";
+                for (const card of selectedCards) {
+                    const cardElement = createCardElement(card);
+                    result.appendChild(cardElement);
+                }
+                result.style.display = "block";
+            });
+
+            // startRound(round1, apiCards.slice(0, 3));
+            startRound(round1, card1, card2, card3);
+
+            showResultButton.style.display = "none";
+
+            round2.style.display = "none"; // Inicialmente, oculte a segunda rodada
+            round3.style.display = "none"; // Inicialmente, oculte a terceira rodada
+
+            round1.addEventListener("click", () => {
+                // Quando você clica em qualquer um dos 3 cards da primeira rodada,
+                // a segunda rodada é exibida, e a primeira rodada é ocultada
+                startRound(round2, apiCards.slice(3, 6));
+                round1.style.display = "none";
+                round2.style.display = "block";
+            });
+
+            round2.addEventListener("click", () => {
+                // Quando você clica em qualquer um dos 3 cards da segunda rodada,
+                // a terceira rodada é exibida, e a segunda rodada é ocultada
+                startRound(round3, apiCards.slice(6, 9));
+                round2.style.display = "none";
+                round3.style.display = "block";
+            });
+        }
+
+        startGame();
+        
+    </script>
+</body>
+</html>

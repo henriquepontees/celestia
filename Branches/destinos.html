@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/css/style.css">
+    <script src="FetchMars.js" defer ></script>
+    <script src="FetchSaturn.js" defer ></script>
+    <script src="FetchJupiter.js" defer ></script>
+    <title>Celestia - Destinations</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="../Assets/images/logo branco.png" alt="logo"></a>
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link " href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="../Branches/destinos.html">Destinations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link login" id="login" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="criarc" href="#">Create account</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="titulo-destinos">
+            <h1>Select a planet to see our planned routes</h1>
+        </div>
+        <div class="cards-container">
+            <div class="card1" id="solar-system-info-container" >
+                <img src="../Assets/images/marte1 card.png" alt="Imagem 1">
+                <div class="rodape">
+                    <h2  id="solar-system-info"></h2>
+                    <p>Explore Mars, the Red Planet, with its intriguing Martian landscape that combines majestic canyons, and towering mountains. Embark on a journey that merges scientific exploration with a passion for space, igniting visions of an interplanetary future.</p>
+                    <button class="btn info-button" data-modal="modal1" type="button">Explore route</button>
+                </div>
+            </div>
+        
+            <div class="card1" id="saturncontainer" >
+                <img src="../Assets/images/saturno1 card.png" alt="Imagem 2">
+                <div class="rodape">
+                    <h2 id="saturn" ></h2>
+                    <p>Visit Saturn, the "Lord of the Rings," and immerse yourself in the dazzling beauty of its sparkling rings, intriguing moons, and astronomical complexity. An experience that inspires imagination and appreciation of the wonders of deep space.</p>
+                    <button class="btn info-button" data-modal="modal2" type="button">Explore route</button>
+                </div>
+            </div>
+        
+            <div class="card1" id="jupitercontainer" >
+                <img src="../Assets/images/jupiter1 card.png" alt="Imagem 3">
+                <div class="rodape">
+                    <h2 id="jupiter" ></h2>
+                    <p>Visit Jupiter, the gas giant of the solar system, and contemplate its turbulent atmosphere, the Great Red Spot and its fascinating Galilean moons. An experience that leads us to explore the mysteries of the universe and admire its cosmic grandeur.</p>
+                    <button class="btn info-button" data-modal="modal3" type="button">Explore route</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-modal" id="modal1">
+            <div class="modal-content"  id="marscontainer"  >
+                <span class="close-button" data-modal="modal1">&times;</span>
+                <img src="../Assets/images/marte1 card.png" alt="">
+                <h2>Detailed information</h2>
+                <p id="mars" ></p>
+                <p style="text-align: justify;" > Prepare for an epic odyssey to Mars, the Red Planet, where the present-day allure of space exploration awaits your adventurous spirit. Mars, with its distinctive rusty hue and otherworldly landscapes, beckons you to discover a world of unparalleled beauty and scientific intrigue. <br> <br>
+
+                    Imagine yourself standing on the Martian surface, gazing across the vast expanse of rusty-red deserts that stretch as far as the eye can see. As the Martian winds whip around you, you'll encounter towering canyons and mesmeric geological formations, evidence of a planet with a storied past. Descend into the depths of Valles Marineris, the solar system's largest canyon, and contemplate the forces that have shaped Mars over eons. <br> <br>
+                    
+                    But Mars is more than just a desert world. Venture towards its polar ice caps, where glaciers of water and carbon dioxide hold the secrets of Martian climate history. Witness the stark contrast between the frozen poles and the arid equatorial regions, offering a glimpse into the planet's geological diversity. <br> <br>
+                    <img src="../Assets/images/mars.jpeg" class="io" >
+                    As you traverse the Martian landscape, your journey will take you to the foot of Olympus Mons, the tallest volcano in our solar system, and its neighboring peaks, where you can stand in awe of their colossal size. Explore the potential for past or present life as you visit the Jezero Crater, a site that once held a lake and may offer clues to Martian biology. <br> <br>
+                    
+                    The Martian moons, Phobos and Deimos, will captivate your curiosity as you ponder their origins and the unique perspectives they provide of Mars and the cosmos. <br> <br>
+                    
+                    Mars, with its stark beauty and scientific enigmas, is a present-day frontier for those with a passion for space exploration. Join the ranks of adventurers and scientists as we unveil the mysteries of this iconic planet, where the possibilities for discovery and human exploration continue to unfold. </p>
+                <h2>$200.000</h2>
+                <button type="button" id="b-modal">Buy</button>
+            </div>
+        </div>
+        
+        <div class="info-modal" id="modal2">
+            <div class="modal-content" id="saturnmodalcontainer" >
+                <span class="close-button" data-modal="modal2">&times;</span>
+                <img src="../Assets/images/saturno1 card.png" alt="">
+                <h2>Detailed information</h2>
+                <p id="saturnmodal" ></p>
+                <p style="text-align: justify;" >Step into the awe-inspiring realm of Saturn, the crowned jewel of our solar system, and embark on a journey that will leave you spellbound by its timeless beauty. Right here, in the present, Saturn beckons with its resplendent rings and a medley of moons, promising a celestial adventure beyond compare. <br> <br>
+
+                    Imagine yourself in orbit around Saturn, where you'll be greeted by the sheer magnificence of its iconic ring system, a breathtaking tapestry of ice and rock that defies imagination. Feel the thrill as you explore these majestic rings, witnessing their intricate patterns and stunning brilliance up close. <br> <br>
+                    <img src="../Assets/images/rheaa.jpeg" class="io" >
+                    But Saturn is not just about its rings. Venture further, and you'll encounter a symphony of moons that will capture your imagination. Titan, the enigmatic moon with a thick atmosphere and lakes of liquid methane, will leave you pondering the possibilities of exotic life forms. Enceladus, with its towering geysers erupting from a subsurface ocean, will intrigue you with the mysteries of hidden oceans. And Iapetus, with its stark contrast between light and dark hemispheres, will ignite your curiosity about the enigmatic history of these celestial bodies. <br> <br>
+                    
+                    As you journey through Saturn's celestial neighborhood, you'll be enchanted by the dance of its moons and the intricate interplay between these cosmic companions. Witness the dramatic changes in scenery and phenomena as you traverse Saturn's rings and marvel at the planet's exquisite auroras that grace its polar skies. <br> <br>
+                    
+                    Saturn, with its timeless splendor, invites you to embark on a present-day celestial sojourn. Join us in unraveling the mysteries of this gas giant, its resplendent rings, and its captivating moons, where the wonders of the cosmos await your exploration.</p>
+                <h2>$200.000</h2>
+                <button type="button" id="b-modal">Buy</button>
+            </div>
+        </div>
+        
+        <div class="info-modal" id="modal3">
+            <div class="modal-content" id="jupitermodalcontainer" >
+                <span class="close-button" data-modal="modal3">&times;</span>
+                <img src="../Assets/images/jupiter1 card.png" alt="">
+                <h2>Detailed information</h2>
+                <p id="jupitermodal" ></p>
+                <p style="text-align: justify;" >Step into the realm of Jupiter, the majestic gas giant, and embark on a cosmic odyssey that will leave you in awe of the wonders of our solar system. Right here in the present, Jupiter beckons with its sheer grandeur and a constellation of moons that promise a journey of discovery like no other. <br> <br>
+
+                    Imagine yourself in orbit around Jupiter, gazing in amazement at its iconic Great Red Spot, a colossal storm that has captivated astronomers for centuries. Feel the exhilaration as you delve into its vibrant atmosphere, studying the swirling cloud bands and unraveling the mysteries of its tempestuous weather patterns. <br> <br>
+                    <img src="../Assets/images/io-jupiter.jpg"  class="io"> <br> <br>
+                    But Jupiter has much more to offer. Its entourage of moons is a celestial wonderland waiting to be explored. Io, with its volcanic eruptions and surreal landscapes, will ignite your senses. Europa, with its icy surface concealing the potential for a subsurface ocean, will spark your curiosity about the search for extraterrestrial life. Ganymede, the largest moon in our solar system, will mesmerize you with its diverse terrains and intriguing magnetic field. And Calisto, adorned with cosmic scars, will transport you to the ancient history of our solar system. <br> <br>
+
+                    As you journey through Jupiter's intricate ring system, you'll witness a celestial ballet of beauty that adds a touch of sparkle to this giant's presence. Marvel at the interplay between Jupiter and its moons, and be enchanted by the radiant auroras that grace its polar skies. <br> <br>
+                    
+                    Jupiter, with its larger-than-life allure, offers a present-day adventure into the heart of our solar system. Join us in exploring the mysteries of this gas giant and its captivating moons, where the wonders of the cosmos await those who dare to venture beyond our Earthly horizons.</p>
+                <h2>$200.000</h2>
+                <button type="button" id="b-modal">Buy</button>
+            </div>
+        </div>
+        
+        <script>
+            const infoButtons = document.querySelectorAll('.info-button');
+            const modals = document.querySelectorAll('.info-modal');
+            const closeButtons = document.querySelectorAll('.close-button');
+        
+            // Função para abrir o modal
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            }
+        
+            // Função para fechar o modal
+            function closeModal(modalId) {
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'none';
+            }
+        
+            infoButtons.forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    const modalId = e.target.getAttribute('data-modal');
+                    openModal(modalId);
+                });
+            });
+        
+            closeButtons.forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    const modalId = e.target.getAttribute('data-modal');
+                    closeModal(modalId);
+                });
+            });
+        </script>
+        
+
+    </main>
+    <footer>
+        <p class="foot">&copy Todos os direitos reservados</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

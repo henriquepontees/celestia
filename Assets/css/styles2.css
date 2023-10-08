@@ -1,0 +1,184 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Yeager';
+    src: url('../fontes/Yeager/Yeager-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(../fontes/Inter-Regular.ttf) format('opentype');
+}
+:root {
+    --roxo-degrade-escuro: #7e1e88;
+    --roxo-degrade-claro: #951179;
+    --roxo-botão: #a83ebf;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+#criarc{
+    background-image: linear-gradient(to bottom, var(--roxo-degrade-escuro),var(--roxo-degrade-claro));
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: normal; 
+}
+#criarc:hover{
+    color:black;
+}
+
+a.navbar-brand{
+    color: white;
+}
+.navbar-brand p{
+    font-size: 50px;
+}
+.navbar-brand .logo{
+    width: 250px;
+}
+.navbar-brand:hover{
+    background-color: none ;
+    color: white;
+}
+.navbar-brand:visited{
+    color: white;
+}
+.navbar-nav{
+    gap: 5px;
+    letter-spacing: 3px;
+}
+.navbar-nav{
+    gap: 5px;
+    letter-spacing: 3px;
+}
+a.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: var(--roxo-degrade-escuro);
+}
+.nav-link:active{
+    color: white;
+}
+body{
+    background-color: black;
+}
+.bg{
+    background-color: white;
+}
+.landing-div{
+    position: relative;
+}
+.orb {
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: clamp(400px, 70%, 900px);
+
+}
+.box{
+    position: absolute;
+    top:80px;
+    left: 50px;
+    padding: 40px;
+    width: clamp(350px,55%, 547px);
+    height: 588px ;
+}
+.box h1 {
+    font-family: 'Yeager', sans-serif;
+    color: white;
+    font-size: 5.5vw; 
+    text-transform: uppercase;
+    line-height: 1.2; 
+    max-width: 100%;
+    min-width: 300px;
+    overflow-x: hidden;
+}
+.container1{
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+}
+.font{
+    margin: 0px;
+    font-family: 'Inter';
+    font-weight: 500px;
+}
+.box p{
+    color: gray;
+    text-align: justify;
+}
+.botao{
+    background-color: var(--roxo-botão);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 7px;
+}
+.botao:hover{
+    background-color: white;
+    color: var(--roxo-botão);
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    background-image: url(../images/universo2.png);
+}
+.primeiro, .segundo, .terceiro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    background-image: url(../images/universo2.png);
+    border: 1px solid #000;
+}
+.api-itinerario1, .api-itinerario2, .api-imagem1, .api-imagem2, .api-itinerario3, .api-imagem3 {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 5px;
+    background-image: url(../images/universo2.png);
+}
+.api-itinerario1 p, .api-itinerario2 p, .api-itinerario3 p{
+    height: 100px;
+    color: white;
+    text-align: justify;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 15px;
+    font-size: 14px;
+}
+.api-itinerario1 h1, .api-itinerario2 h1, .api-itinerario3 h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.marte{
+    width: 600px ;
+    height: 500px;
+}
+.saturno{
+    width: 600px ;
+    height: 500px;
+}
+.jupiter{
+    width: 600px;
+    height: 500px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: var(--roxo-degrade-escuro);
+    padding: 10px;
+    color: white;
+}
